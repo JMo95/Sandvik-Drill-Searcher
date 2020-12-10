@@ -1,0 +1,646 @@
+-- MySQL dump 10.13  Distrib 5.6.49, for Linux (x86_64)
+--
+-- Host: localhost    Database: drills
+-- ------------------------------------------------------
+-- Server version	5.6.49
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `Add Pipe`
+--
+
+DROP TABLE IF EXISTS `Add Pipe`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `Add Pipe` (
+  `Dex` int(11) NOT NULL AUTO_INCREMENT,
+  `Input_Type` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`Dex`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Add Pipe`
+--
+
+LOCK TABLES `Add Pipe` WRITE;
+/*!40000 ALTER TABLE `Add Pipe` DISABLE KEYS */;
+INSERT INTO `Add Pipe` VALUES (1,'1'),(2,'0'),(3,'0.2'),(4,'0.35'),(5,'0.4'),(6,'0.5');
+/*!40000 ALTER TABLE `Add Pipe` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `DTH HP Comp`
+--
+
+DROP TABLE IF EXISTS `DTH HP Comp`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `DTH HP Comp` (
+  `Dex` int(11) NOT NULL AUTO_INCREMENT,
+  `Input_Type` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`Dex`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `DTH HP Comp`
+--
+
+LOCK TABLES `DTH HP Comp` WRITE;
+/*!40000 ALTER TABLE `DTH HP Comp` DISABLE KEYS */;
+INSERT INTO `DTH HP Comp` VALUES (1,'1'),(2,'1000'),(3,'1160'),(4,'1350'),(5,'1450');
+/*!40000 ALTER TABLE `DTH HP Comp` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `DTH/Rotary`
+--
+
+DROP TABLE IF EXISTS `DTH/Rotary`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `DTH/Rotary` (
+  `Dex` int(11) NOT NULL AUTO_INCREMENT,
+  `Input_Type` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`Dex`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `DTH/Rotary`
+--
+
+LOCK TABLES `DTH/Rotary` WRITE;
+/*!40000 ALTER TABLE `DTH/Rotary` DISABLE KEYS */;
+INSERT INTO `DTH/Rotary` VALUES (1,'1'),(2,'DTH'),(3,'Rotary'),(4,'Both');
+/*!40000 ALTER TABLE `DTH/Rotary` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `Drill_Table`
+--
+
+DROP TABLE IF EXISTS `Drill_Table`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `Drill_Table` (
+  `drill_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `Name` varchar(45) DEFAULT NULL,
+  `Pipe Sizes` varchar(45) DEFAULT NULL,
+  `RH Weight` varchar(45) DEFAULT NULL,
+  `Max Feed Pressure` varchar(45) DEFAULT NULL,
+  `Single Pass` varchar(45) DEFAULT NULL,
+  `Pipe Length` varchar(45) DEFAULT NULL,
+  `Loader Cap` varchar(45) DEFAULT NULL,
+  `Feed Rate` varchar(45) DEFAULT NULL,
+  `Hoist Rate` varchar(45) DEFAULT NULL,
+  `Add Pipe` varchar(45) DEFAULT NULL,
+  `Set Up` varchar(45) DEFAULT NULL,
+  `DTH/Rotary` varchar(45) DEFAULT NULL,
+  `DTH HP Comp` varchar(45) DEFAULT NULL,
+  `Rotary Comp` varchar(45) DEFAULT NULL,
+  `Rotary Bit (in)` varchar(45) DEFAULT NULL,
+  `Rotary Max Pulldown` varchar(45) DEFAULT NULL,
+  `Hole Size Diameter` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`drill_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=141 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Drill_Table`
+--
+
+LOCK TABLES `Drill_Table` WRITE;
+/*!40000 ALTER TABLE `Drill_Table` DISABLE KEYS */;
+INSERT INTO `Drill_Table` VALUES (1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(116,'D245S','114,127,140,152','1100','3501','28.6','30','4','97','207','0.4','1','Both','1000, 1160','1050,1225','127,133,140,146,152,159,171,203','30000','127,203'),(117,'D25KS','89,102,114,127,140','1100','3501','28.6','30','2','120','217','0.4','1','Both','1000,1160','900,1050,1225','127,133,140,146,152,159,171','25000','127,171'),(118,'D45KS 34','114,127,140,152,165,179','1300','3001','28.6','30','4','125','164','0.5','1.5','DTH','1000,1160','NA','NA','NA','152,229'),(119,'D45KS 40','114,127,140,152,165,179','1300','3001','34.5','35','4','125','164','0.5','2','DTH','1000,1160','NA','NA','NA','152,229'),(120,'D50KS 34','114,127,140,152,165,179','1300','3001','28.6','30','4','125','164','0.5','1.5','Rotary','NA','1050,1323,1600','152,159,171,200,216,229,252','50000','152,251'),(121,'D50KS 40','114,127,140,152,165,179','1300','3001','28.6','35','4','125','164','0.5','2','Rotary','NA','1050,1323,1600','152,159,171,200,216,229,252,254','50000','152,251'),(122,'D75KS	','195,203,219,229,235,246','2050','3501','55','25','2','139','171','0.5','2','Both','1350,1450','1600,2000','229,251,270,279','75000','229,279'),(124,'D55SP','152,159,165,178,194','1300','3501','55','25','2','139','171','0','2.5','Both','1350','1600,2000','172,200,216,229,251,254','35000','172,254'),(125,'DR410i MP','114,127,140,152,165,179,195,179	','1500','3001','34.5','35','4','130','130','0.35','1.5','Both','1450','1600','152,159,171,200,216,229,251,254	','50000','152,251'),(126,'DR410i SP','114,127,140,152,165,179,195,179','1500','3001','45.9','30','2','130','130','0.35','1.5','Both','1450','1600','152,159,171,200,216,229,251,251	','50000','152,251'),(128,'DR412i MP','178,194,203,219,229,224,260,224','2050','3751','38.6','40','6','71','120','0.5','2','Rotary','NA','2000,2600','229,251,270,279,331','80000','229,311'),(129,'DR412i SP','114,127,140,152,165,179,195,179','2050','3751','65','32,5','0','75','98','0','3','Rotary','NA','2000,2600','229,251,270,279,311','80000','229,311'),(130,'1190E SP	','194,219,246,260,273','3580','2701','34.5','35','4','125','164','0.5','2','Rotary','NA','2600','229,251,270,279,286,311,349','100000','229,349'),(131,'D90KS','194,219,246,273','3580','3001','38.6','40','6','71','120','0.5','3','Rotary','NA','2600,3000','229,251,270,279,286,311,349','90000','229,349'),(132,'D90SP','194,219,246,260,273','3580','2702','65','32.5','0','75','98','0','4','Rotary','NA','2600,3000','229,251,270,279,286,311,349','90000','229,349'),(133,'1190E','194,219,246,273','3580','3001','66','32.5','2','130','130','0.5','3','Rotary','NA','2600,3000','229,251,270,279,286,311,349	','100000','229,349'),(134,'DR416i','219,235,273,323,340','14000','1601','21.3','20','6','257','257','0.2','1','Rotary','NA','3850','311,330,381,406','120000','311,406');
+/*!40000 ALTER TABLE `Drill_Table` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `Feed Rate`
+--
+
+DROP TABLE IF EXISTS `Feed Rate`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `Feed Rate` (
+  `Dex` int(11) NOT NULL AUTO_INCREMENT,
+  `Input_Type` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`Dex`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Feed Rate`
+--
+
+LOCK TABLES `Feed Rate` WRITE;
+/*!40000 ALTER TABLE `Feed Rate` DISABLE KEYS */;
+INSERT INTO `Feed Rate` VALUES (1,'1'),(2,'71'),(3,'75'),(4,'89'),(7,'120'),(8,'125'),(9,'130'),(10,'139'),(11,'257');
+/*!40000 ALTER TABLE `Feed Rate` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `Hoist Rate`
+--
+
+DROP TABLE IF EXISTS `Hoist Rate`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `Hoist Rate` (
+  `Dex` int(11) NOT NULL AUTO_INCREMENT,
+  `Input_Type` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`Dex`)
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Hoist Rate`
+--
+
+LOCK TABLES `Hoist Rate` WRITE;
+/*!40000 ALTER TABLE `Hoist Rate` DISABLE KEYS */;
+INSERT INTO `Hoist Rate` VALUES (1,'1'),(2,'98'),(5,'114'),(6,'120'),(7,'130'),(8,'164'),(9,'171'),(10,'207'),(11,'217'),(12,'257');
+/*!40000 ALTER TABLE `Hoist Rate` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `Hole Size Diameter`
+--
+
+DROP TABLE IF EXISTS `Hole Size Diameter`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `Hole Size Diameter` (
+  `Dex` int(11) NOT NULL AUTO_INCREMENT,
+  `Input_Type` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`Dex`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Hole Size Diameter`
+--
+
+LOCK TABLES `Hole Size Diameter` WRITE;
+/*!40000 ALTER TABLE `Hole Size Diameter` DISABLE KEYS */;
+INSERT INTO `Hole Size Diameter` VALUES (1,'0');
+/*!40000 ALTER TABLE `Hole Size Diameter` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `Loader Cap`
+--
+
+DROP TABLE IF EXISTS `Loader Cap`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `Loader Cap` (
+  `Dex` int(11) NOT NULL AUTO_INCREMENT,
+  `Input_Type` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`Dex`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Loader Cap`
+--
+
+LOCK TABLES `Loader Cap` WRITE;
+/*!40000 ALTER TABLE `Loader Cap` DISABLE KEYS */;
+INSERT INTO `Loader Cap` VALUES (1,'1'),(2,'0'),(3,'2'),(4,'4'),(5,'6');
+/*!40000 ALTER TABLE `Loader Cap` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `Max Feed Pressure`
+--
+
+DROP TABLE IF EXISTS `Max Feed Pressure`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `Max Feed Pressure` (
+  `Dex` int(11) NOT NULL AUTO_INCREMENT,
+  `Input_Type` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`Dex`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Max Feed Pressure`
+--
+
+LOCK TABLES `Max Feed Pressure` WRITE;
+/*!40000 ALTER TABLE `Max Feed Pressure` DISABLE KEYS */;
+INSERT INTO `Max Feed Pressure` VALUES (1,'1'),(2,'1601'),(3,'2701'),(4,'3001'),(5,'3501'),(6,'3751');
+/*!40000 ALTER TABLE `Max Feed Pressure` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `Name`
+--
+
+DROP TABLE IF EXISTS `Name`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `Name` (
+  `Dex` int(11) NOT NULL AUTO_INCREMENT,
+  `Input_Type` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`Dex`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Name`
+--
+
+LOCK TABLES `Name` WRITE;
+/*!40000 ALTER TABLE `Name` DISABLE KEYS */;
+INSERT INTO `Name` VALUES (1,'0'),(2,'Hey'),(3,'Poggies');
+/*!40000 ALTER TABLE `Name` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `Pipe Length`
+--
+
+DROP TABLE IF EXISTS `Pipe Length`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `Pipe Length` (
+  `Dex` int(11) NOT NULL AUTO_INCREMENT,
+  `Input_Type` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`Dex`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Pipe Length`
+--
+
+LOCK TABLES `Pipe Length` WRITE;
+/*!40000 ALTER TABLE `Pipe Length` DISABLE KEYS */;
+INSERT INTO `Pipe Length` VALUES (1,'1'),(2,'20'),(4,'30'),(5,'32.5'),(6,'35'),(7,'40');
+/*!40000 ALTER TABLE `Pipe Length` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `Pipe Sizes`
+--
+
+DROP TABLE IF EXISTS `Pipe Sizes`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `Pipe Sizes` (
+  `Dex` int(11) NOT NULL AUTO_INCREMENT,
+  `Input_Type` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`Dex`)
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Pipe Sizes`
+--
+
+LOCK TABLES `Pipe Sizes` WRITE;
+/*!40000 ALTER TABLE `Pipe Sizes` DISABLE KEYS */;
+INSERT INTO `Pipe Sizes` VALUES (1,'1'),(2,'89'),(3,'102'),(4,'114'),(5,'127'),(6,'140'),(7,'152'),(9,'159'),(10,'165'),(11,'178'),(12,'179'),(13,'194'),(14,'195'),(15,'203'),(16,'219'),(17,'229'),(18,'235'),(19,'246'),(20,'260'),(21,'273'),(22,'323'),(23,'340');
+/*!40000 ALTER TABLE `Pipe Sizes` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `RH Weight`
+--
+
+DROP TABLE IF EXISTS `RH Weight`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `RH Weight` (
+  `Dex` int(11) NOT NULL AUTO_INCREMENT,
+  `Input_Type` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`Dex`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `RH Weight`
+--
+
+LOCK TABLES `RH Weight` WRITE;
+/*!40000 ALTER TABLE `RH Weight` DISABLE KEYS */;
+INSERT INTO `RH Weight` VALUES (1,'1'),(2,'1100'),(3,'1300'),(5,'1500'),(6,'2050'),(7,'3580'),(8,'14000');
+/*!40000 ALTER TABLE `RH Weight` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `Rotary Bit (in)`
+--
+
+DROP TABLE IF EXISTS `Rotary Bit (in)`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `Rotary Bit (in)` (
+  `Dex` int(11) NOT NULL AUTO_INCREMENT,
+  `Input_Type` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`Dex`)
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Rotary Bit (in)`
+--
+
+LOCK TABLES `Rotary Bit (in)` WRITE;
+/*!40000 ALTER TABLE `Rotary Bit (in)` DISABLE KEYS */;
+INSERT INTO `Rotary Bit (in)` VALUES (1,'1'),(4,'127'),(5,'133'),(6,'140'),(7,'146'),(8,'152'),(9,'159'),(10,'171'),(11,'200'),(12,'203'),(13,'216'),(14,'229'),(15,'251'),(16,'254'),(17,'270'),(18,'279'),(19,'286'),(20,'311'),(22,'330'),(23,'349'),(24,'381'),(25,'406');
+/*!40000 ALTER TABLE `Rotary Bit (in)` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `Rotary Comp`
+--
+
+DROP TABLE IF EXISTS `Rotary Comp`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `Rotary Comp` (
+  `Dex` int(11) NOT NULL AUTO_INCREMENT,
+  `Input_Type` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`Dex`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Rotary Comp`
+--
+
+LOCK TABLES `Rotary Comp` WRITE;
+/*!40000 ALTER TABLE `Rotary Comp` DISABLE KEYS */;
+INSERT INTO `Rotary Comp` VALUES (1,'1'),(2,'900'),(3,'1050'),(4,'1225'),(5,'1323'),(6,'1600'),(7,'2000'),(8,'2600'),(9,'3000'),(10,'3850');
+/*!40000 ALTER TABLE `Rotary Comp` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `Rotary Max Pulldown`
+--
+
+DROP TABLE IF EXISTS `Rotary Max Pulldown`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `Rotary Max Pulldown` (
+  `Dex` int(11) NOT NULL AUTO_INCREMENT,
+  `Input_Type` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`Dex`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Rotary Max Pulldown`
+--
+
+LOCK TABLES `Rotary Max Pulldown` WRITE;
+/*!40000 ALTER TABLE `Rotary Max Pulldown` DISABLE KEYS */;
+INSERT INTO `Rotary Max Pulldown` VALUES (1,'1'),(2,'25000'),(3,'30000'),(4,'35000'),(5,'45000'),(6,'50000'),(7,'75000'),(8,'80000'),(9,'90000'),(10,'100000'),(11,'120000');
+/*!40000 ALTER TABLE `Rotary Max Pulldown` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `Set Up`
+--
+
+DROP TABLE IF EXISTS `Set Up`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `Set Up` (
+  `Dex` int(11) NOT NULL AUTO_INCREMENT,
+  `Input_Type` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`Dex`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Set Up`
+--
+
+LOCK TABLES `Set Up` WRITE;
+/*!40000 ALTER TABLE `Set Up` DISABLE KEYS */;
+INSERT INTO `Set Up` VALUES (1,'1'),(2,'1'),(3,'1.5'),(4,'2'),(5,'2.5'),(6,'3'),(7,'4');
+/*!40000 ALTER TABLE `Set Up` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `Single Pass`
+--
+
+DROP TABLE IF EXISTS `Single Pass`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `Single Pass` (
+  `Dex` int(11) NOT NULL AUTO_INCREMENT,
+  `Input_Type` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`Dex`)
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Single Pass`
+--
+
+LOCK TABLES `Single Pass` WRITE;
+/*!40000 ALTER TABLE `Single Pass` DISABLE KEYS */;
+INSERT INTO `Single Pass` VALUES (1,'1'),(2,'21.3'),(3,'28.6'),(8,'32.8'),(9,'33.5'),(10,'34.5'),(11,'45.9'),(12,'55'),(13,'65'),(14,'66');
+/*!40000 ALTER TABLE `Single Pass` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `Test Table`
+--
+
+DROP TABLE IF EXISTS `Test Table`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `Test Table` (
+  `Dex` int(11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`Dex`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Test Table`
+--
+
+LOCK TABLES `Test Table` WRITE;
+/*!40000 ALTER TABLE `Test Table` DISABLE KEYS */;
+/*!40000 ALTER TABLE `Test Table` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `contact`
+--
+
+DROP TABLE IF EXISTS `contact`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `contact` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `city` varchar(100) DEFAULT NULL,
+  `country` varchar(100) DEFAULT NULL,
+  `job` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `contact`
+--
+
+LOCK TABLES `contact` WRITE;
+/*!40000 ALTER TABLE `contact` DISABLE KEYS */;
+INSERT INTO `contact` VALUES (1,'TestName','TestEmail','TestCity','TestCountry','TestJob'),(2,'TestPosting','Kappa','Pog','Keepo','Champ'),(3,'Test','a','c','b','d'),(4,'Test','a','c','b','d');
+/*!40000 ALTER TABLE `contact` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `cust_consult`
+--
+
+DROP TABLE IF EXISTS `cust_consult`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `cust_consult` (
+  `cust_name` varchar(45) NOT NULL,
+  `proj_name` varchar(45) NOT NULL,
+  `date` date NOT NULL,
+  `elevation` int(11) DEFAULT NULL,
+  `unit` varchar(45) DEFAULT NULL,
+  `amb_temp` int(11) DEFAULT NULL,
+  `dth` int(11) DEFAULT NULL,
+  `rock_ucs` varchar(45) DEFAULT NULL,
+  `units_used` varchar(45) DEFAULT NULL,
+  `pipe_size` int(11) DEFAULT NULL,
+  `hole_depth` int(11) DEFAULT NULL,
+  `rotary_pulldown` varchar(45) DEFAULT NULL,
+  `rotary_psi` int(11) DEFAULT NULL,
+  PRIMARY KEY (`cust_name`,`proj_name`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `cust_consult`
+--
+
+LOCK TABLES `cust_consult` WRITE;
+/*!40000 ALTER TABLE `cust_consult` DISABLE KEYS */;
+/*!40000 ALTER TABLE `cust_consult` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `drill`
+--
+
+DROP TABLE IF EXISTS `drill`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `drill` (
+  `name` varchar(45) NOT NULL,
+  `coverage` varchar(45) DEFAULT NULL,
+  `hole_len` int(11) NOT NULL,
+  `booms` varchar(45) DEFAULT NULL,
+  `control_sys` varchar(45) DEFAULT NULL,
+  `onboard_batt` int(11) DEFAULT NULL,
+  `max_batt_energy` int(11) DEFAULT NULL,
+  `tram_dist` varchar(45) DEFAULT NULL,
+  `automation_lvl` int(11) DEFAULT NULL,
+  `drif_size_class` int(11) DEFAULT NULL,
+  `transport_width` int(11) DEFAULT NULL,
+  `transport_height` int(11) DEFAULT NULL,
+  `total_weight` int(11) DEFAULT NULL,
+  PRIMARY KEY (`name`,`hole_len`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `drill`
+--
+
+LOCK TABLES `drill` WRITE;
+/*!40000 ALTER TABLE `drill` DISABLE KEYS */;
+INSERT INTO `drill` VALUES ('',NULL,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),('Test Name','Test Coverage',0,'Booms','Control',0,0,'Tram',0,0,0,0,0);
+/*!40000 ALTER TABLE `drill` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `employee`
+--
+
+DROP TABLE IF EXISTS `employee`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `employee` (
+  `name` varchar(45) NOT NULL,
+  `empoyee_id` int(11) NOT NULL,
+  `privilege` int(11) DEFAULT NULL,
+  `email` varchar(45) DEFAULT NULL,
+  `password` varchar(45) NOT NULL,
+  PRIMARY KEY (`empoyee_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `employee`
+--
+
+LOCK TABLES `employee` WRITE;
+/*!40000 ALTER TABLE `employee` DISABLE KEYS */;
+/*!40000 ALTER TABLE `employee` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `login_table`
+--
+
+DROP TABLE IF EXISTS `login_table`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `login_table` (
+  `dex` bigint(20) NOT NULL AUTO_INCREMENT,
+  `username` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL,
+  `password` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL,
+  PRIMARY KEY (`dex`),
+  UNIQUE KEY `username` (`username`,`password`)
+) ENGINE=InnoDB AUTO_INCREMENT=153 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `login_table`
+--
+
+LOCK TABLES `login_table` WRITE;
+/*!40000 ALTER TABLE `login_table` DISABLE KEYS */;
+INSERT INTO `login_table` VALUES (93,'1','1'),(86,'@apple','@k109!'),(100,'A','B'),(111,'Kappa','Kappa'),(110,'NA','NB'),(94,'NewUsername','NewPassword'),(87,'TESTUPPER','TESTUPPERPASS'),(101,'abc','abc'),(123,'admin','aqpw!@449w'),(121,'aq','aq'),(114,'aqwe','aq'),(151,'ddd','ddd'),(92,'hello','hello'),(115,'josh','j'),(85,'k12','123'),(113,'q','q'),(119,'same','same'),(117,'test','test'),(91,'test','test1'),(1,'testUsername','testPassword'),(89,'testing_man','test');
+/*!40000 ALTER TABLE `login_table` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2020-12-09 17:15:15
